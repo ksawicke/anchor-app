@@ -1,0 +1,1592 @@
+/**
+ * Color Scheme
+ *
+ * Blue: #2B6CA3 // rgba(43, 108, 163, 1) or #2B6CA3
+ * Gold: #C0AF2C
+ * Light Grey: #CFD4D8
+ * Mid Grey: #919194
+ * White: #254061
+ *
+ * Extracted colors:
+ * Lighter gold: #f6cd29
+ * Medium manilla: #e5c458
+ * Mid gold: #e4bb2b
+ * Mid copper: #c9b692
+ *
+ **/
+body {
+    font-family:'Montserrat', sans-serif;
+    font-weight:300;
+    background: #242323;
+    margin-top: 0px;
+    font-size: 14px;
+    min-height: 1px !important;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+* {
+    border-radius: 0 !important;
+}
+
+body > div.container {
+    margin-top:-8px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    padding: 0px;
+    margin-top: 15px;
+    margin-bottom: 22px;
+}
+
+/* 10px gutter */
+.gutter-10.row {
+    margin-right: -5px;
+    margin-left: -5px;
+}
+.gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.copyright {
+    color: #fff;
+  padding-bottom:25px;
+}
+
+.form-control {
+    font-size: 14px;
+}
+
+.navbar {
+    background: #fff;
+    border: 1px solid #2B6CA3;
+    height:60px;
+}
+
+.navbar-header {
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+  padding: 15px 0px 15px 15px;
+}
+
+.header-item {
+    float: left;
+    margin-right: 15px;
+}
+
+.header-item-sm {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.ul-sm {
+    margin-top: -15px;
+}
+
+.li-sm {
+    margin-top: 0px;
+}
+
+table.siteLogoHeaderTable th, table.siteLogoHeaderTable td {
+  border: 0px;
+}
+table.siteLogoHeaderTable td {
+  margin: 0px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.header-item-sm {
+    float: left;
+    margin-right: 5px;
+}
+
+.site-name, .site-name-sm, .site-name-md, .site-name-lg,
+.welcome-message-lg, .welcome-message-md {
+    color: #2B6CA3;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(85, 85, 85, 0.3);
+}
+
+.site-name-lg {
+    margin-top: 15px;
+    font-size: 140%;
+}
+.site-name-md {
+    margin-top: 15px;
+    font-size: 120%;
+}
+.site-name-sm {
+    margin-top: 15px;
+    font-size: 105%;
+}
+
+.site-name-sm {
+    margin-top: 20px;
+    font-size: 110%;
+}
+
+.welcome-message-lg {
+  font-size:120%;
+  margin-left:15px;
+}
+.welcome-message-md {
+  font-size:100%;
+  margin-left:10px;
+}
+
+.anchorlogo-lg {
+    margin-top:-18px;
+}
+.anchorlogo-md {
+    margin-top:-14px;
+}
+.anchorlogo-sm {
+    margin-top:-8px;
+}
+
+.row-even {
+    background-color: #E6E6E6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #00467E;
+    font-weight: bold
+}
+
+#tabs {
+    border-bottom: 0px;
+    margin-bottom: 2px;
+}
+
+#tabs li a {
+    font-weight: bold;
+    background-color: #333;
+    color: #999999;
+    border: none;
+}
+
+#tabs li.active a {
+    background: #fff;
+    color: #2B6CA3;
+    font-weight: bold;
+    border-bottom: 1px solid #fff;
+}
+
+#tabs li a:hover {
+    background: #fff;
+    color: #2B6CA3;
+    font-weight: bold;
+    border-bottom: 1px solid #fff;
+}
+
+/** Bootstrap tabs **/
+ul.nav.nav-tabs {
+  margin-top: -35px;
+}
+ul.nav.nav-tabs li a {
+  color: #919194;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+ul.nav.nav-tabs li.active a {
+  color: #fff;
+  background-color: #337ab7;
+}
+.tab-content {
+  border: 1px solid #ccc;
+  padding:15px;
+}
+
+li {
+    margin-top: 30px;
+}
+
+label {
+    color: #000;
+}
+
+.btn-primary {
+    background-color: #FFF;
+    color: #000;
+    font-weight: bold;
+    border: 2px solid #ffcc00;
+}
+
+.btn-primary-no-border-color {
+    background-color: #FFF;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: ##e36600;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
+
+.btn-form-primary {
+    background: #2B6CA3;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-form-primary:hover {
+    background-color: #e36600;
+    border: 1px solid #e36600;
+	color: #fff;
+    font-weight: bold;
+}
+
+.well {
+    background-color: #fff;
+    color: #000;
+    padding: 15px;
+    border: none;
+}
+
+.btn-group-custom {
+    background-color: #FFF;
+    color: #2B6CA3;
+    font-weight: bold;
+    font-size: 140%;
+    border: 1px solid #2B6CA3;
+}
+
+.btn-group-custom:hover {
+    background-color: #ffd333;
+    border: 1px solid #2B6CA3;
+}
+
+.tableRowHeight {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+div.container {
+    color: #fff;
+}
+
+.loginPadding {
+    padding: 15px;
+}
+
+/**
+ * Navigation
+ *
+ **/
+.dropdown-toggle {
+    margin-top:-20px;
+}
+.caret-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-bottom: 4px solid;
+
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+#navbar > ul > li { /* Background color of dropdown menu parent */
+    /*background-color: #fff; rgba(22,19,12,0.8);*/
+}
+#navbar > ul > li.dropdown.open > a { /* Background color of dropdown menu parent on hover */
+    background-color: rgba(22,19,12,0.8);
+    color: #fff;
+    font-weight:normal;
+}
+.navbar-nav>li>.dropdown-menu {
+    background-color: rgba(22,19,12,0.8);
+    padding:0px;
+    margin:0px;
+}
+#navbar > ul > li.dropdown.open > ul > li {
+    padding:0px;
+    margin:0px;
+    background-color:transparent;
+}
+#navbar > ul > li.dropdown.open > ul > li a {
+    color: #fff;
+    padding:15px 15px 15px 15px;
+    margin:0px;
+    font-weight:normal;
+    background-color:transparent;
+}
+#navbar > ul > li.dropdown > ul > li a {
+    color: #fff;
+    padding:15px 15px 15px 15px;
+    margin:0px;
+    font-weight:normal;
+    background-color:transparent;
+}
+#navbar > ul > li.dropdown.open > ul > li:hover a {
+    background-color:transparent;
+    color: yellow;
+}
+#navbar > ul > li.dropdown > ul > li { /* Fixes so we don't have extra padding when hovering over different main menus */
+  padding-top:0px;
+  margin-top:0px;
+}
+
+.parsley-errorUserid {
+    color: red;
+}
+
+.warnFirstDayRequestedTooOld {
+    color: red;
+    font-weight: bold;
+}
+
+.app_breadcrumb {
+    background: #2B6CA3;
+    color: #fff;
+}
+
+.app_breadcrumb:hover {
+    background: #2B6CA3;
+    color: #ffcc00;
+}
+
+.well_breadcrumb {
+    color: #2B6CA3;
+}
+
+.well_breadcrumb:hover {
+    background-color: #2B6CA3;
+    color: #ffcc00;
+}
+
+.rowMinHeight {
+    height: 36px;
+}
+
+.rowLgHeight {
+    height: 60px;
+}
+
+.rowTextareaHeight {
+    height: 135px;
+}
+
+textarea.apiTextArea {
+    font-size: 12px;
+    height: 125px;
+}
+
+.glyphicon-remove {
+    color: red;
+    margin-top: 10px;
+}
+
+.moveTextDown {
+    margin-top: 8px;
+}
+
+.apiSuccess {
+    background-color: #dff0d8;
+}
+
+.apiError {
+    background-color: #f2dede;
+}
+
+.login-label {
+    color: #fff;
+}
+
+.parsley-errors-list {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* overflow: hidden; */
+    *zoom: 1
+}
+
+.parsley-errors-list li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    white-space: nowrap
+}
+
+.parsley-errors-list li {
+    color: #db3833;
+    font-size: 0.9em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.glyphicon-hidden {
+    color: #B2B2B2;
+}
+
+.alert .glyphicon {
+    display: table-cell;
+}
+
+.alert div, .alert span {
+    padding-left: 5px;
+    display: table-cell;
+}
+
+.table>tfoot>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #969597;
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #969597;
+}
+
+.table-bordered {
+    border: 1px solid #969597;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #D4D3D3;
+}
+
+/**
+ * Calendar
+ *
+ * @see https://davidwalsh.name/php-calendar
+ */
+table.calendar {
+    border-left: 1px solid #999;
+    width:100%;
+}
+
+tr.calendar-row {
+    height:200px;
+    /**min-height:200px;**/
+}
+
+body > div.container > div > table > tbody > tr > div {
+    min-height:145px;
+}
+
+body > div.container > div > table > tbody > tr > td:nth-child(0) > p,
+body > div.container > div > table > tbody > tr > td:nth-child(1) > p,
+body > div.container > div > table > tbody > tr > td:nth-child(2) > p,
+body > div.container > div > table > tbody > tr > td:nth-child(3) > p,
+body > div.container > div > table > tbody > tr > td:nth-child(4) > p,
+body > div.container > div > table > tbody > tr > td:nth-child(5) > p,
+body > div.container > div > table > tbody > tr > td:nth-child(6) > p,
+body > div.container > div > table > tbody > tr > td:nth-child(7) > p
+{
+    position:absolute;
+    top:10px;
+    width:80%;
+    margin-left:25px;
+}
+
+tr.calendar-header-adjust {
+    height:50px;
+}
+
+td.calendar-day {
+    min-height: 80px;
+    font-size: 11px;
+    position: relative;
+}
+
+td.calendar-day.today {
+    border: 3px solid red;
+}
+
+* html div.calendar-day {
+    height: 80px;
+}
+
+td.calendar-day:hover {
+
+}
+
+td.calendar-day-np {
+    min-height: 80px;
+}
+
+* html div.calendar-day-np {
+    height: 80px;
+}
+
+td.calendar-day-head {
+    background: #e5c458;
+    font-weight: bold;
+    text-align: center;
+    width: 120px;
+    padding: 5px;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+}
+
+div.day-number {
+    /*background: #fff;*/
+    padding: 5px;
+    color: #000;
+    font-weight: bold;
+    float: right;
+    /*margin: -5px -5px 0 0;*/
+    width: 20px;
+    text-align: center;
+    font-size:14px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+/* shared */
+td.calendar-day, td.calendar-day-np {
+    width: 120px;
+    padding: 5px;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+}
+
+#calendar2Html {
+    margin-top:4px;
+}
+
+/**
+ * Color schemes for time off
+ *
+ * 'red' => '#c0362c',
+ * 'orange' => '#ff8642',
+ * 'copper' => '#816c5b',
+ * 'green' => '#668d3c',
+ * 'darkTurquoise' => '#0097ac',
+ * 'lightTurquoise' => '#96c2f4'
+ *
+ * @see http://www.creativecolorschemes.com/resources/free-color-schemes/beach-color-scheme.shtml
+ **/
+th, td {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+tr.calendar-header-adjust {
+    height:20px;
+}
+
+td.calendar-day {
+    min-height: 20px !important;
+    font-size: 11px;
+    position: relative;
+}
+
+/*div.day-number {
+  margin-right:6px;
+}
+td.calendar-day p {
+  margin-top:0px;
+  margin-left:20px;
+  text-align:left;
+}*/
+
+#calendarManagerBody > table > tbody > tr > td:nth-child(1) > p,
+#calendarManagerBody > table > tbody > tr > td:nth-child(2) > p,
+#calendarManagerBody > table > tbody > tr > td:nth-child(3) > p,
+#calendarManagerBody > table > tbody > tr > td:nth-child(4) > p,
+#calendarManagerBody > table > tbody > tr > td:nth-child(5) > p,
+#calendarManagerBody > table > tbody > tr > td:nth-child(6) > p,
+#calendarManagerBody > table > tbody > tr > td:nth-child(7) > p {
+  /*margin: 0px;
+  padding: 0px;
+  margin-top:0px;
+    margin-left:25px;
+    text-align:left;*/
+  vertical-align: top;
+  text-align:left;
+    padding: 0px 0px 5px 5px;
+    /*width: 392px;*/
+    height: 125px;
+  margin-left:20px;
+}
+
+* html div.calendar-day {
+    height: 20px;
+}
+
+td.calendar-day:hover {
+
+}
+
+td.calendar-day-np {
+    min-height: 20px;
+}
+
+* html div.calendar-day-np {
+    height: 20px;
+}
+
+.timeOffCategoryLeft {
+    text-align:center;
+    width:50px;
+    border:1px solid #000;
+    float:left;
+}
+.timeOffCategory {
+    text-align:center;
+    width:150px;
+    border:1px solid #000;
+    float:left;
+    margin-left:-1px;
+    margin-right:10px;
+}
+
+/**
+.timeOffCategory {
+        text-align:center;
+        width:150px;
+        border:1px solid #000;
+        padding:5px;
+        display:inline-block;
+}
+**/
+/**
+https://www.colorschemer.com/schemes/viewscheme.php?id=10473
+**/
+
+.btn-requestCategory {
+    padding: 0px;
+    line-height:16px;
+}
+.padBottomButtonRow {
+    margin-bottom: 10px;
+}
+
+.timeOffPTO {
+    background-color: #f57900 !important;
+}
+.timeOffFloat {
+    background-color: #edd400 !important;
+}
+.timeOffSick {
+    background-color: #73d216 !important;
+}
+.timeOffUnexcusedAbsence {
+    background-color: #888a85 !important;
+}
+.timeOffBereavement {
+    background-color: #729fcf !important;
+}
+.timeOffCivicDuty {
+    background-color: #75507b !important;
+}
+.timeOffGrandfathered {
+    background-color: #c17d11 !important;
+}
+.timeOffApprovedNoPay {
+    background-color: #cc0000 !important;
+}
+
+.rowWrapper {
+    margin:15px;
+}
+.categoryButtonWrapper {
+    width:90%;
+}
+.categoryButton {
+    padding:10px;
+    border: 1px solid #000;
+}
+
+/**
+ * Calendar mask if no category selected...
+ * @see http://jsfiddle.net/5Vw8b/9/
+ */
+div#calendarWrapper {
+    position:relative;
+}
+div#calendarWrapper >a {
+    display: none;
+}
+div#calendarWrapper:hover >a {
+    display:block;
+}
+div#calendarWrapper:before{
+    content:'';
+    background: #000;
+    position:absolute;
+    left: 0;
+    top: 0;
+    bottom:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /** Disables user from clicking on calendar navigation & select dates **/
+    transition:0.4s;
+    opacity:0;
+}
+div#calendarWrapper:hover .calendarMask {
+    opacity:0.25;
+    transition:0.4s;
+    opacity:0.5;
+}
+div#calendarWrapper #timeOffCalendarWarningNoCategorySelected {
+    display: none;
+    position: absolute;
+    z-index:3;
+    text-decoration: none;
+    width:100%;
+}
+div#calendarWrapper:hover #timeOffCalendarWarningNoCategorySelected {
+    display: block;
+    transition:0.4s;
+}
+
+.autoCloseMessage {
+    display:inline-block !important;
+    margin:0px;
+}
+
+
+/** CSS Stripes
+ * @see https://css-tricks.com/stripes-css/
+ */
+.timeOffPTOSelected {
+    background: repeating-linear-gradient(
+        315deg,
+        #f57900,
+        #f57900 10px,
+        #ddd 10px,
+        #ddd 20px
+        );
+}
+.timeOffFloatSelected {
+    background: repeating-linear-gradient(
+        315deg,
+        #edd400,
+        #edd400 10px,
+        #ddd 10px,
+        #ddd 20px
+        );
+}
+.timeOffSickSelected {
+    background: repeating-linear-gradient(
+        315deg,
+        #73d216,
+        #73d216 10px,
+        #ddd 10px,
+        #ddd 20px
+        );
+}
+.timeOffUnexcusedAbsenceSelected {
+    background: repeating-linear-gradient(
+        315deg,
+        #888a85,
+        #888a85 10px,
+        #ddd 10px,
+        #ddd 20px
+        );
+}
+.timeOffBereavementSelected {
+    background: repeating-linear-gradient(
+        315deg,
+        #729fcf,
+        #729fcf 10px,
+        #ddd 10px,
+        #ddd 20px
+        );
+}
+.timeOffCivicDutySelected {
+    background: repeating-linear-gradient(
+        315deg,
+        #75507b,
+        #75507b 10px,
+        #ddd 10px,
+        #ddd 20px
+        );
+}
+.timeOffGrandfatheredSelected {
+    background: repeating-linear-gradient(
+        315deg,
+        #c17d11,
+        #c17d11 10px,
+        #ddd 10px,
+        #ddd 20px
+        );
+}
+.timeOffApprovedNoPaySelected {
+    background: repeating-linear-gradient(
+        315deg,
+        #cc0000,
+        #cc0000 10px,
+        #ddd 10px,
+        #ddd 20px
+        );
+}
+
+/** Split background color
+.splitPTOFloat {
+        background: -webkit-linear-gradient(left, #ff8642 50%, #0097ac 50%);
+    background: -moz-linear-gradient(left, #ff8642 50%, #0097ac 50%);
+    background: -ms-linear-gradient(left, #ff8642 50%, #0097ac 50%);
+    background: linear-gradient(left, #ff8642 50%, #0097ac 50%;
+}
+**/
+
+.categoryColorSelected {
+    border-left:4px solid black;
+    border-top:4px solid black;
+    border-bottom:4px solid black;
+}
+.categorySelected {
+    font-weight: bold;
+    border:4px solid black;
+    color:#fff;
+}
+.categoryTimeExceeded {
+    border:4px solid red !important;
+}
+.pendingHours {
+    font-size:12px;
+    line-height:12px;
+    margin-bottom:4px;
+}
+.hours {
+    font-size:150%;
+}
+
+.glyphicon-timeOffPTO:before {
+    content:"\25cf";
+    font-size: 2em;
+    color: #f57900;
+}
+.glyphicon-timeOffFloat:before {
+    content:"\25cf";
+    font-size: 2em;
+    color: #edd400;
+}
+.glyphicon-timeOffSick:before {
+    content:"\25cf";
+    font-size: 2em;
+    color: #73d216;
+}
+.glyphicon-timeOffUnexcused:before {
+    content:"\25cf";
+    font-size: 2em;
+    color: #888a85;
+}
+.glyphicon-timeOffBereavement:before {
+    content:"\25cf";
+    font-size: 2em;
+    color: #729fcf;
+}
+.glyphicon-timeOffCivicDuty:before {
+    content:"\25cf";
+    font-size: 2em;
+    color: #75507b;
+}
+.glyphicon-timeOffGrandfathered:before {
+    content:"\25cf";
+    font-size: 2em;
+    color: #c17d11;
+}
+.glyphicon-timeOffApprovedNoPay:before {
+    content:"\25cf";
+    font-size: 2em;
+    color: #cc0000;
+}
+
+.calendarNavigation,
+.cursorHand,
+td.calendar-day {
+    cursor: pointer;
+}
+td.calendar-day-disabled {
+    background-color: #404040 !important;
+    cursor: default !important;
+}
+td.calendar-day-holiday {
+    border: 3px solid fuchsia !important;
+    cursor: default !important;
+}
+
+.requestPending {
+    filter:alpha(opacity=60); /* IE */
+    -moz-opacity:0.6; /* Mozilla */
+    opacity: 0.6; /* CSS3 */
+}
+.requestApproved {
+    filter:alpha(opacity=100); /* IE */
+    -moz-opacity:1; /* Mozilla */
+    opacity: 1; /* CSS3 */
+}
+.teamCalendarHeader {
+    font-size:150%;
+}
+
+div.form-group > div {
+    margin-top:8px;
+}
+
+/** Alerts **/
+div.alert.alert-warning {
+    border: 1px solid #ffcc33;
+    background-color: #ffe699;
+    color: #b88a00;
+}
+
+div.alert.alert-error {
+    border: 1px solid #ebccd1;
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+span.badge {
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+/**
+ * Fuel step wizard CSS
+ **/
+.wizard {
+    position: relative;
+    overflow: hidden;
+    background-color: #f9f9f9
+}
+
+.wizard:before,.wizard:after {
+    display: table;
+    line-height: 0;
+    content: ""
+}
+
+.wizard:after {
+    clear: both
+}
+
+.wizard ul {
+    width: 4000px;
+    padding: 0;
+    margin: 0;
+    list-style: none outside none
+}
+
+.wizard ul.previous-disabled li.complete {
+    cursor: default
+}
+
+.wizard ul.previous-disabled li.complete:hover {
+    color: #468847;
+    cursor: default;
+    background: #f3f4f5
+}
+
+.wizard ul.previous-disabled li.complete:hover .chevron:before {
+    border-left-color: #f3f4f5;
+}
+
+.wizard ul li {
+    position: relative;
+    float: left;
+    height: 32px; /* was 46px */
+    padding: 0 16px 0 18px; /* was 0 20px 0 30px */
+    margin: 0;
+    /*font-size: 16px;*/
+    line-height: 32px; /* was 46px */
+    color: #a5a5a5;
+    cursor: default;
+    background: #f2f2f2
+}
+
+.wizard ul li:first-child {
+    padding-left: 15px /* was 20px */
+}
+
+.wizard ul li .chevron {
+    position: absolute;
+    top: -24px;
+    right: -14px;
+    z-index: 1;
+    display: block;
+    border: 40px solid transparent;
+    border-right: 0;
+    border-left: 24px solid #fff
+}
+
+.wizard ul li .chevron:before {
+    position: absolute;
+    top: -48px; /* was -48px */
+    right: 5px;
+    display: block;
+    border: 48px solid transparent; /* determines the height of the right point: > */
+    border-right: 0;
+    border-left: 24px solid #f2f2f2;
+    content: ""
+}
+
+.wizard ul li.complete {
+    color: #fff;
+    background: #4ba84b;
+}
+
+.wizard ul li.complete:hover {
+    cursor: pointer;
+    background: #49a449
+}
+
+.wizard ul li.complete:hover .chevron:before {
+    border-left: 24px solid #49a449
+}
+
+.wizard ul li.complete .chevron:before {
+    border-left: 24px solid #4ba84b;
+}
+
+.wizard ul li.active {
+    color: #fff;
+    background: #296eaa
+}
+
+.wizard ul li.active .chevron:before {
+    border-left: 24px solid #296eaa
+}
+
+.wizard ul li .badge {
+    position: relative;
+    top: -2px;
+    margin-right: 8px;
+    padding: 4px 7px
+}
+
+.wizard ul li .badge.badge-info {
+    background-color: #1f5381
+}
+
+.wizard ul li .badge.badge-success {
+    background-color: #3b853b
+}
+
+.step-content {
+    margin: 30px 0;
+    padding-left: 20px
+}
+
+.step-content .step-pane {
+    display: none
+}
+
+.step-content .active {
+    display: block
+}
+
+.step-content .active .btn-group .active {
+    display: inline-block
+}
+
+/* Category buttons */
+.buttonTable {
+    width:100%;
+}
+.buttonTable td {
+    border:none !important;
+}
+.categoryButtonCategoryLabel {
+    font-size:15px;
+    text-align:center;
+    border:none;
+}
+.categoryButtonPendingLabel {
+    text-align:right;
+    font-size:10px;
+    border:0px;
+}
+.categoryButtonNumberPendingHours {
+    text-align:left;
+    font-size:10px;
+    border:0px;
+}
+.categoryButtonRemainingLabel {
+    text-align:right;
+    font-size:10px;
+    border:none !important;
+}
+.categoryButtonNumberRemainingHours {
+    text-align:left;
+    font-size:12px;
+    border:0px;
+}
+
+/**
+ * Close button
+ **/
+
+.buttonAllowForIcon {
+    position: relative;
+}
+
+.categoryCloseIcon {
+    position: absolute;
+    color:#fff;
+    right:5px;
+    top:5px;
+    width:15px;
+    height:15px;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+
+.split-date-requested,
+.remove-date-requested {
+    cursor:hand;
+}
+
+.moveDown {
+    margin-top:10px;
+}
+
+button .full-width {
+    width:100%;
+    display:block;
+}
+
+.requestIsForMe {
+    display:none;
+    margin-right:30px;
+    margin-top:10px;
+    float:left;
+}
+
+/****
+.typeahead + .dropdown-menu {
+    background-color:#fff;
+        border:1px solid #296eaa;
+}
+.typeahead + .dropdown-menu .active > a,
+.typeahead + .dropdown-menu .active > a:hover {
+    color: #000;
+    background-color: #e5c458;
+}
+.typeahead + .dropdown-menu li {
+        background:#fff;
+        margin:0px;
+        margin-top:-3px;
+        padding:5px;
+}
+****/
+
+.hidden {
+    display:none;
+}
+
+/** Calendar Legend for requests **/
+.legend-title {
+    text-align: left;
+    margin-bottom: 15px;
+    font-weight: normal;
+    font-size: 90%;
+}
+.timeOffCalendarLegend .legend-scale ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+}
+.timeOffCalendarLegend .legend-scale ul li {
+    display: block;
+    float: left;
+    width: 75px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 80%;
+    list-style: none;
+}
+.timeOffCalendarLegend ul.legend-labels {
+    margin-top:-30px;
+}
+.timeOffCalendarLegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 75px;
+}
+.timeOffCalendarLegend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+}
+.timeOffCalendarLegend a {
+    color: #777;
+}
+
+/** Alerts **/
+.autoCloseMessage {
+    margin-left:12px;
+}
+.autoCloseMessage span {
+    margin:0px;
+}
+
+/** Font Awesome **/
+.iconCalendarPayrollApproved {
+    color: #49a449;
+}
+
+#calendarLegend {
+    display: block;
+}
+
+/** Employee Schedule **/
+/** http://www.textfixer.com/tutorials/css-tables.php **/
+/** Try maybe also https://github.com/geon/geon.github.com/blob/master/_posts/2016-03-03-dsxyliea.md **/
+/*table.employeeSchedule,
+table.hoursRequested {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+table.employeeSchedule th,
+table.hoursRequested th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+}
+table.employeeSchedule td,
+table.hoursRequested td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}*/
+
+table.employeeSchedule,
+table.hoursRequested {
+    font-size: 12px;
+    line-height: 1;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table.employeeSchedule th,
+table.hoursRequested th,
+table.employeeSchedule td,
+table.hoursRequested td{
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
+
+/*** Review Request ***/
+div.panel.panel-default div.panel-body div.row div.col-lg-8 div.row {
+    padding:8px;
+}
+
+/** Request Screen **/
+.selectedDateHours {
+    width: 60px;
+}
+
+/** Datatables **/
+div.dataTables_length {
+    float: left;
+}
+
+div.dataTables_filter {
+    float: right;
+}
+
+div.dataTables_info {
+    float: left;
+}
+
+div.dataTables_paginate {
+    float: right;
+}
+
+div.DTTT {
+    float: left;
+    margin-right: 50px;
+}
+
+div.buttons {
+    clear: both;
+}
+
+#startDate,
+#endDate {
+    border:1px solid #ccc;
+    padding:6px;
+    width: 100px;
+}
+
+.dataTable th {
+    vertical-align:top;
+}
+.dataTable th select {
+    font-weight:normal;
+}
+.dataTable td {
+    font-family:Helvetica,Arial,sans-serif;
+    font-weight:normal;
+    font-size:90%;
+}
+.dataTables_info {
+    font-weight:normal;
+    font-size:80%;
+    line-height: 2.7em;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/**
+ * Animations for disabling buttons on click
+ **/
+.gly-spin {
+    -webkit-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+}
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(359deg);
+    }
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+    }
+}
+@-o-keyframes spin {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+.gly-rotate-90 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.gly-rotate-180 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.gly-rotate-270 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.gly-flip-horizontal {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+    -webkit-transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+.gly-flip-vertical {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+    -webkit-transform: scale(1, -1);
+    -moz-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    transform: scale(1, -1);
+}
+
+.payrollComment {
+    font-weight: bold;
+    color: red;
+}
+
+.borderColorRed {
+    border-color: red;
+}
+
+.hrefDisabled {
+    color: gray;
+}
+
+.columnWidth115 {
+    width: 115px;
+    max-width: 115px;
+}
+
+.breakLongWord {
+    max-width: 250px;
+    word-wrap: break-word;
+}
+
+.breakLongWordDiv {
+    word-wrap: break-word;
+}
+
+p.clear {
+	clear: both;
+}
+
+.payrollQueueFilter {
+	border: 0;
+	float: right;
+}
+
+.fullWidth {
+	width: 100%;
+}
+.filterWrapper {
+	border: 0px solid #fff;
+}
+.excelIconMargin {
+	margin-right: 5px;
+}
+.payrollActionsColumnWidth {
+	width: 150px;
+}
+
+/**
+ * Mobile first media queries
+ **/
+/* Custom, iPhone and Retina */
+@media only screen and (max-width: 479px) {
+  div#navbar.navbar-collapse.collapse.in { /* Background color of dropdown menu parent */
+      margin-top:-18px;
+    background-color: #fff;
+  }
+  .navbar-nav>li>.dropdown-menu {
+      background-color: rgba(22,19,12,0.8);
+      padding:0px;
+      margin:0px;
+  }
+  #navbar > ul > li.dropdown.open > ul > li {
+      padding:0px;
+      margin:0px;
+      background-color:#fff;
+  }
+  #navbar > ul > li.dropdown.open > ul > li a {
+      color: rgba(22,19,12,0.8);
+      padding:15px 15px 15px 15px;
+      margin:0px;
+      font-weight:normal;
+      background-color:#fff;
+  }
+  #navbar > ul > li.dropdown > ul > li a {
+      color: rgba(22,19,12,0.8);
+      padding:15px 15px 15px 15px;
+      margin:0px;
+      font-weight:normal;
+      background-color:#fff;
+  }
+  #navbar > ul > li.dropdown.open > ul > li:hover a {
+      background-color:rgba(22,19,12,0.8);
+      color: yellow;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+div#navbar.navbar-collapse.collapse.in { /* Background color of dropdown menu parent */
+      margin-top:-18px;
+    background-color: #fff;
+  }
+  .navbar-nav>li>.dropdown-menu {
+      background-color: rgba(22,19,12,0.8);
+      padding:0px;
+      margin:0px;
+  }
+  #navbar > ul > li.dropdown.open > ul > li {
+      padding:0px;
+      margin:0px;
+      background-color:#fff;
+  }
+  #navbar > ul > li.dropdown.open > ul > li a {
+      color: rgba(22,19,12,0.8);
+      padding:15px 15px 15px 15px;
+      margin:0px;
+      font-weight:normal;
+      background-color:#fff;
+  }
+  #navbar > ul > li.dropdown > ul > li a {
+      color: rgba(22,19,12,0.8);
+      padding:15px 15px 15px 15px;
+      margin:0px;
+      font-weight:normal;
+      background-color:#fff;
+  }
+  #navbar > ul > li.dropdown.open > ul > li:hover a {
+      background-color:rgba(22,19,12,0.8);
+      color: yellow;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  div#navbar.navbar-collapse.collapse.in { /* Background color of dropdown menu parent */
+      background-color: #fff;
+  }
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/** ERRORS **/
+
+.has-error .form-control {
+    border: 1px solid red;
+    background-color: #ffcccc;
+}
+
+.help-block {
+    font-color: red;
+    font-weight: bold;
+}

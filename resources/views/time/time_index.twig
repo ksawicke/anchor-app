@@ -1,0 +1,80 @@
+{% extends "layout.twig" %}
+
+{% block title %}View Unsubmitted Time{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    
+<div class="row gutter-10">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <h4>View Unsubmitted Time</h4>
+    </div>
+</div>
+
+<div class="row gutter-10">
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+    
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        
+        {% if count > 0 %}
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Date Worked</th>
+                    <th>Client Name</th>
+                    <th>Hours</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in entries %}
+                    <tr>
+                        <td>{{ entry.date_worked_mdy }}</td>
+                        <td>{{ entry.client_name }} </td>
+                        <td>{{ entry.hours }}</td>
+                        <td>
+                            <a href="{{ path_for('time.add') }}/{{entry.id}}"><button type="submit" class="btn btn-xs btn-form-primary">Edit</button></a>
+                            <a href="/public/time/delete/{{entry.id}}"><button type="submit" class="btn btn-xs btn-form-primary">Delete</button></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>
+            No time entries were found.
+        </p>
+        <br />
+        {% endif %}
+        
+        <a href="{{ path_for('time.add') }}"><button type="submit" class="btn btn-form-primary">Add Time</button></a>
+        
+        <br /><br />
+        
+        <a href="{{ path_for('time.submit') }}"><button type="submit" class="btn btn-form-primary">Submit Time for Pay Period</button></a>
+        
+        <!--script>
+            $('.jconfirm').on('click', function(e){
+               e.preventDefault();
+               confirm( function(){
+                   console.log( $(this) );
+//                  window.location.href = "/sonoran/public/time/delete/{{entry.id}}";
+//                   successAlert('Confirmed');
+               }, function(){
+//                   errorAlert('Denied');
+               });
+               return false; 
+            });
+          </script-->
+        
+    </div>
+    
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "layout.twig" %}
+
+{% block title %}View Employees{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    
+<div class="row gutter-10">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <h4>View Employees</h4>
+    </div>
+</div>
+
+<div class="row gutter-10">
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+    
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        
+        {% if count > 0 %}
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employees %}
+                    <tr>
+                        <td>{{ employee.last_name }},  {{ employee.first_name }} </td>
+                        <td>
+                            <a href="{{ path_for('employee.add') }}/{{employee.id}}"><button type="submit" class="btn btn-xs btn-form-primary">Edit</button></a>
+                            <a href="{{ path_for('employee.delete') }}/{{employee.id}}"><button type="submit" class="btn btn-xs btn-form-primary disabled">Delete</button></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>
+            No employees were found.
+        </p>
+        <br />
+        {% endif %}
+        
+        <a href="{{ path_for('employee.add') }}"><button type="submit" class="btn btn-form-primary">Add Employee</button></a>
+        
+    </div>
+    
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+</div>
+
+{% endblock %}

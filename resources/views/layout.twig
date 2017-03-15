@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
+    {% block head %}
+        <!--link rel="stylesheet" href="style.css" /-->
+        <title>Anchor - {% block title %}{% endblock %}</title>
+
+        <link href="/public/templates/sonoran/css/montserrat.css" rel="stylesheet">
+        <link href="/public/templates/sonoran/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/public/templates/sonoran/css/bootstrap_custom.css" rel="stylesheet">
+        <link href="/public/templates/sonoran/css/print.css" rel="stylesheet">
+        <link href="/public/templates/sonoran/css/custom_dropzone.css" rel="stylesheet">
+        <link href="/public/templates/sonoran/css/navbar-fixed-top.css" rel="stylesheet">
+        <link href="/public/templates/sonoran/css/parsley.css" rel="stylesheet">
+        
+        <link href="/public/css/select2/select2.min.css" rel="stylesheet">
+        <link href="/public/css/select2/select2-flat-design.css" rel="stylesheet">
+        <link href="/public/css/fullcalendar.min.css" rel="stylesheet">
+        <link href="/public/css/jqueryui/jquery-ui.css" rel="stylesheet">
+        <link href="/public/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/public/css/toggle_switch/style.css" rel="stylesheet">
+
+        <script type="text/javascript" src="/public/templates/sonoran/js/jquery/1.12.4/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="/public/templates/sonoran/js/jquery-ui/1.12.1/jquery-ui.js"></script>
+
+        <script type="text/javascript" src="/public/templates/sonoran/js/parsley.min.js"></script>
+        <script type="text/javascript" src="/public/templates/sonoran/js/parsley.remote.min.js"></script>
+        <script type="text/javascript" src="/public/templates/sonoran/js/bootstrap.min.js"></script>
+        
+        <script src="/public/templates/sonoran/js/jAlert/jAlert.js"></script>
+	    <script src="/public/templates/sonoran/js/jAlert/jAlert-functions.js"></script>
+	    <link href="/public/templates/sonoran/js/jAlert/jAlert.css" rel="stylesheet">
+    {% endblock %}
+    </head>
+
+    <body>
+
+        
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    
+                    <div class="visible-lg">
+                      <table class="siteLogoHeaderTable">
+                        <tr>
+                          <td>
+                            <a class="navbar-brand" href="public/request/view-my-requests"><img style="margin-top:-20px;margin-top:-20px;height:auto;height:60px;" src="/public/img/anchor.png"></a>
+                          </td>
+                          <td>
+                            <span class="site-name-lg">Anchor</span><span class="welcome-message-lg"></span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    
+                    <div class="visible-md">
+                        <table class="siteLogoHeaderTable">
+                        <tr>
+                          <td>
+                            <a class="navbar-brand" href="public/request/view-my-requests"><img style="margin-top:-20px;margin-top:-20px;height:auto;height:50px;" src="/public/img/anchor.png"></a>
+                          </td>
+                          <td>
+                            <span class="site-name-md">Anchor</span><span class="welcome-message-md"></span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    
+                    <div class="visible-xs visible-sm">
+                        <table class="siteLogoHeaderTable">
+                        <tr>
+                          <td>
+                            <a class="navbar-brand" href="public/request/view-my-requests"><img style="margin-top:-20px;margin-top:-15px;height:auto;height:50px;" src="/public/img/anchor.png"></a>
+                          </td>
+                          <td>
+                            <span class="site-name-sm">Anchor</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if sonoranAccountingSession is not null %}
+                            {% if sonoranAccountingSession.role == 'Admin' %}
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <b class="caret"></b></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="{{ path_for('client.view') }}">Manage Clients</a></li>
+                                        <li><a href="{{ path_for('employee.view') }}">Manage Employees</a></li>
+                                        <li><a href="{{ path_for('timesheet.view') }}">View Submitted Timesheets</a></li>
+                                    </ul>
+                                </li>
+                            {% endif %}
+                        
+                        <li class="dropdown" id="menuMyAccount">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Account <b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
+                                {% if sonoranAccountingSession.role == 'Employee' %}
+                                    <li><a href="{{ path_for('time.view') }}">Record Time</a></li>
+                                {% endif %}
+                                <li><a href="{{ path_for('auth.logout') }}">Log Out</a></li>
+                            </ul>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div><!--/.nav-collapse -->
+
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="well well-sm">
+
+                <!--{{ sonoranAccountingSession | json_encode }}-->
+                
+                {% block content %}{% endblock %}
+
+
+                <br />
+                <br />
+                <br />
+
+                
+            </div>
+
+            <span class="copyright">Copyright &copy; 2017 Sonoran Accounting Services LLC.</span>
+        </div> <!-- /container -->
+		
+    </form>
+</div>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <!--script src="../../assets/js/ie10-viewport-bug-workaround.js"></script-->
+		
+		<!--script src="/public/templates/sonoran/js/sonoran/sonoranLogin.js"></script-->
+
+    </body>
+</html>

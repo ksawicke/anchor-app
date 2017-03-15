@@ -1,0 +1,76 @@
+{% extends "layout.twig" %}
+
+{% block title %}View Submitted Timesheets{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    
+<div class="row gutter-10">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <h4>View Submitted Timesheets</h4>
+    </div>
+</div>
+
+<div class="row gutter-10">
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+    
+    <div class="col-sm-6 col-md-6 col-lg-6">        
+        {% if count > 0 %}
+            
+            {% for timesheet in timesheets %}
+                <h4>{{ timesheet.first_name }} {{ timesheet.last_name }}</h4>
+                
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Date Worked</th>
+                            <th>Client Name</th>
+                            <th>Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for entry in timesheet.entries %}
+                            <tr>
+                                <td>{{ entry.date_worked_mdy }}</td>
+                                <td>{{ entry.client_name }}</td>
+                                <td>{{ entry.hours }}</td>
+                            </tr>
+                        {% endfor %}  
+                    </tbody>
+                </table>
+                    
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>    
+                        {% for client_name, hours in timesheet.time_worked.by_client %}
+                            <tr>
+                                <td>{{ client_name }}</td>
+                                <td>{{ hours|number_format(2) }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% endfor %} 
+        {% else %}
+        <p>
+            No time entries were found.
+        </p>
+        <br />
+        {% endif %}
+        
+    </div>
+    
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+</div>
+
+{% endblock %}

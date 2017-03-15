@@ -1,0 +1,51 @@
+{% extends "layout.twig" %}
+
+{% block title %}View Users{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    
+<div class="row gutter-10">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <h4>View Users</h4>
+    </div>
+</div>
+
+<div class="row gutter-10">
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+    
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email_address }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <a href="/sonoran/public/user/add"><button type="submit" class="btn btn-form-primary">Add User</button></a>
+        
+    </div>
+    
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+</div>
+
+{% endblock %}

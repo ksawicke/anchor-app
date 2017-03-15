@@ -1,0 +1,181 @@
+{% extends "layout.twig" %}
+
+{% block title %}{% if employee.id is not defined %}Add{% else %}Edit{% endif %} an Employee{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+    <script>
+       $( function() {
+         $( "#date_of_hire" ).datepicker();
+         $( "#date_of_termination" ).datepicker();
+       } );
+     </script>
+{% endblock %}
+{% block content %}
+    
+<div class="row gutter-10">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <h4>{% if employee.id is not defined %}Add{% else %}Edit{% endif %} an Employee</h4>
+    </div>
+</div>
+
+<div class="row gutter-10">
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+    
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        
+        <form method="post" action="{{ path_for('employee.add') }}">
+            
+          <input type="hidden" class="form-control" name="id" id="id" value="{{employee.id}}">    
+            
+          <div class="form-group{{ errors.first_name ? ' has-error' : '' }}">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name" value="{{employee.first_name}}">
+            {% if errors.first_name %}
+                <span class="help-block">{{ errors.first_name | first }}</span>
+            {% endif %}
+          </div>
+            
+          <div class="form-group{{ errors.last_name ? ' has-error' : '' }}">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" value="{{employee.last_name}}">
+            {% if errors.last_name %}
+                <span class="help-block">{{ errors.last_name | first }}</span>
+            {% endif %}
+          </div>
+          
+          <div class="form-group{{ errors.address1 ? ' has-error' : '' }}">
+            <label for="address1">Address 1</label>
+            <input type="text" class="form-control" name="address1" id="address1" placeholder="Address" value="{{employee.address1}}">
+            {% if errors.address1 %}
+                <span class="help-block">{{ errors.address1 | first }}</span>
+            {% endif %}
+          </div>
+          
+          <div class="form-group{{ errors.address2 ? ' has-error' : '' }}">
+            <label for="address2">Address 2</label>
+            <input type="text" class="form-control" name="address2" id="address2" placeholder="Address 2" value="{{employee.address2}}">
+            {% if errors.address2 %}
+                <span class="help-block">{{ errors.address2 | first }}</span>
+            {% endif %}
+          </div>
+          
+          <div class="form-group{{ errors.city ? ' has-error' : '' }}">
+            <label for="city">City</label>
+            <input type="text" class="form-control" name="city" id="city" placeholder="City" value="{{employee.city}}">
+            {% if errors.city %}
+                <span class="help-block">{{ errors.city | first }}</span>
+            {% endif %}
+          </div>
+          
+          <div class="form-group{{ errors.state ? ' has-error' : '' }}">
+            <label for="state">State</label>
+            <select class="form-control" name="state" id="state">
+              <option value="AZ" selected readonly>Arizona</option>
+            </select>
+            {% if errors.state %}
+                <span class="help-block">{{ errors.state | first }}</span>
+            {% endif %}
+          </div>
+          
+          <div class="form-group{{ errors.last_name ? ' has-error' : '' }}">
+            <label for="zipcode">ZIP Code</label>
+            <input type="text" class="form-control" name="zipcode" id="zipcode" placeholder="ZIP Code" value="{{employee.zipcode}}">
+            {% if errors.zipcode %}
+                <span class="help-block">{{ errors.zipcode | first }}</span>
+            {% endif %}
+          </div>
+          
+          <div class="form-group{{ errors.phone_number ? ' has-error' : '' }}">
+            <label for="phone_number">Phone Number</label>
+            <input type="text" class="form-control" name="phone_number" id="phone_number" placeholder="Phone Number" value="{{employee.phone_number}}">
+            {% if errors.phone_number %}
+                <span class="help-block">{{ errors.phone_number | first }}</span>
+            {% endif %}
+          </div>
+          
+          <div class="form-group">
+            <label for="pay_type">Pay type</label>
+            <select class="form-control" name="pay_type" id="pay_type">
+              <option value="H"{{ employee.pay_type == 'H' or employee.id is null ? ' selected' : '' }}>Hourly</option>
+              <option value="S"{{ employee.pay_type == 'S' ? ' selected' : '' }}>Salary</option>
+            </select>
+          </div>
+            
+          <div class="form-group">
+            <label for="rate">Rate</label>
+            <input type="text" class="form-control" name="rate" id="rate" placeholder="Rate" value="{{employee.rate}}">
+          </div>
+            
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username" id="username" placeholder="Username" value="{{employee.username}}">
+          </div>
+          
+          <div class="form-group{{ errors.password ? ' has-error' : '' }}">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Password" value="">
+          </div>
+          {% if errors.password %}
+            <span class="help-block">{{ errors.password | first }}</span>
+          {% endif %}
+          
+          <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Confirm Password" value="">
+          </div>
+            
+          <div class="form-group{{ errors.email_address ? ' has-error' : '' }}">
+            <label for="email_address">Email Address</label>
+            <input type="text" class="form-control" name="email_address" id="email_address" placeholder="Email Address" value="{{employee.email_address}}">
+            {% if errors.email_address %}
+                <span class="help-block">{{ errors.email_address | first }}</span>
+            {% endif %}
+          </div>
+          
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select class="form-control" name="role" id="role">
+              <option value="Employee"{{ employee.role == 'Employee' or employee.id is null ? ' selected' : '' }}>Employee</option>
+              <option value="Admin"{{ employee.role == 'Admin' ? ' selected' : '' }}>Admin</option>
+            </select>
+          </div>
+            
+          <div class="form-group">
+            <label for="extension">Extension</label>
+            <input type="text" class="form-control" name="extension" id="extension" placeholder="Grasshopper Extension" value="{{employee.extension}}">
+          </div>
+          
+          <div class="form-group">
+            <label for="date_of_hire">Date of Hire</label>
+            <input type="text" class="form-control" name="date_of_hire" id="date_of_hire" placeholder="Date" value="{{employee.date_of_hire_mdy}}">
+          </div>
+          
+          <div class="form-group">
+            <label for="date_of_termination">Date of Termination</label>
+            <input type="text" class="form-control" name="date_of_termination" id="date_of_termination" placeholder="Date" value="{{employee.date_of_termination_mdy}}">
+          </div>
+            
+          <br />    
+          <button type="submit" class="btn btn-form-primary">Save</button>
+          
+          {{ csrf.field | raw }}
+          
+        </form>
+        
+        <br />
+        
+        <a href="{{ path_for('employee.view') }}"><button type="submit" class="btn btn-form-primary">Cancel</button></a>
+        
+    </div>
+    
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+</div>
+
+{% endblock %}

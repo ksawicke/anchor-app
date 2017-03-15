@@ -1,0 +1,115 @@
+{% extends "layout.twig" %}
+
+{% block title %}Add time{% endblock %}
+{% block head %}
+    {{ parent() }}
+        <style type="text/css">
+            .important { color: #336699; }
+        </style>
+        <script>
+          $( function() {
+            $( "#date_worked" ).datepicker();
+          } );
+        </script>
+{% endblock %}
+{% block content %}
+    
+<div class="row gutter-10">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <h4>{% if employee.id is not defined %}Add{% else %}Edit{% endif %} Time</h4>
+    </div>
+</div>
+
+<div class="row gutter-10">
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+    
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        
+        <form method="post" action="{{ path_for('time.add') }}">
+           
+          <input type="hidden" class="form-control" name="id" id="id" value="{{time.id}}">    
+            
+          <div class="form-group">
+            <label for="date_worked">Date</label>
+            <input type="text" class="form-control" name="date_worked" id="date_worked" placeholder="Date" value="{{time.date_worked_mdy}}">
+          </div>    
+            
+          <div class="form-group">
+            <label for="clientId">Client Name</label>
+            <select class="form-control" name="client_id" id="client_id">
+              
+              {% for client in clients %}
+                  {% if time.id is not defined %}
+                    
+                    {% if client.name=="INTERNAL" %}
+                      <option value="{{ client.id }}" selected>{{ client.name }}</option>
+                    {% else %}
+                      <option value="{{ client.id }}">{{ client.name }}</option>
+                    {% endif %}
+                
+                  {% else %}
+                
+                     {% if client.id==time.client_id %}
+                       <option value="{{ client.id }}" selected>{{ client.name }}</option>
+                     {% else %}
+                       <option value="{{ client.id }}">{{ client.name }}</option>
+                     {% endif %}
+                
+                  {% endif %}
+              {% endfor %}    
+            
+              <!-----
+              {% if time.id is not defined %}
+                
+                {% for client in clients %}
+                  {% if client.id==time.client_id %}
+                    <option value="{{ client.id }}" selected>{{ client.name }}</option>
+                  {% else %}
+                    <option value="{{ client.id }}">{{ client.name }}</option>
+                  {% endif %}
+                {% endfor %}
+                
+              {% else %}
+                
+                {% for client in clients %}
+                  {% if client.name=="INTERNAL" %}
+                    <option value="{{ client.id }}" selected>{{ client.name }}</option>
+                  {% else %}
+                    <option value="{{ client.id }}">{{ client.name }}</option>
+                  {% endif %}
+                {% endfor %}
+                
+              {% endif %}
+              ----->
+                
+            </select>
+          </div>
+            
+          <div class="form-group">
+            <label for="hours">Hours</label>
+            <input type="text" class="form-control" name="hours" id="hours" placeholder="Hours" value="{{time.hours}}">
+              
+            <p class="help-block">Please enter whole hours only.</p>
+          </div>    
+            
+          <br />    
+          <button type="submit" class="btn btn-form-primary">Save</button>
+          
+          {{ csrf.field | raw }}
+          
+        </form>
+        
+        <br />
+        
+        <a href="{{ path_for('time.view') }}"><button type="submit" class="btn btn-form-primary">Cancel</button></a>
+        
+    </div>
+    
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layout.twig" %}
+
+{% block title %}Add a client{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    
+<div class="row gutter-10">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <h4>Add a Client</h4>
+    </div>
+</div>
+
+<div class="row gutter-10">
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+    
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        
+        <form method="post" action="{{ path_for('client.add') }}">
+            
+          <input type="hidden" class="form-control" name="id" id="id" value="{{client.id}}">     
+            
+          <div class="form-group">
+            <label for="name">Client Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Client Name" value="{{client.name}}">
+          </div>
+            
+          <div class="form-group">
+            <label for="number">Client Number</label>
+            <input type="text" class="form-control" name="number" id="number" placeholder="Client Number" value="{{client.number}}">
+          </div>
+          
+          <div class="form-group">
+            <label for="pay_plan">Pay plan</label>
+            <select class="form-control" name="pay_plan" id="pay_plan">
+              <option value="Hourly"{% if client.pay_plan == "Hourly" %} selected{% endif %}>Hourly</option>
+              <option value="Flat fee"{% if client.pay_plan == "Flat fee" %} selected{% endif %}>Flat fee</option>
+            </select>
+          </div>
+            
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="text" class="form-control" name="amount" id="amount" placeholder="Amount" value="{{client.amount}}">
+          </div>    
+            
+          <br />    
+          <button type="submit" class="btn btn-form-primary">Save</button>
+          
+          {{ csrf.field | raw }}
+          
+        </form>
+        
+        <br />
+        
+        <a href="{{ path_for('client.view') }}"><button type="submit" class="btn btn-form-primary">Cancel</button></a>
+        
+    </div>
+    
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+</div>
+
+{% endblock %}

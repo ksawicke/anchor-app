@@ -1,0 +1,53 @@
+{% extends "layout.twig" %}
+
+{% block title %}View Unsubmitted Time{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    
+<div class="row gutter-10">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <h4>Confirm Submit Time</h4>
+    </div>
+</div>
+
+<div class="row gutter-10">
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+    
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        
+        <div class="alert alert-warning" role="alert">
+            Are you sure you want to submit your time?
+            
+            <br /><br />
+            
+            <a href="{{ path_for('time.submitConfirmed') }}"><button type="submit" class="btn btn-form-primary">Yes</button></a>&nbsp;&nbsp;&nbsp;
+            <a href="{{ path_for('time.view') }}"><button type="submit" class="btn btn-form-primary">No</button></a>
+            
+        </div>
+        
+        <!--script>
+            $('.jconfirm').on('click', function(e){
+               e.preventDefault();
+               confirm( function(){
+                   console.log( $(this) );
+//                  window.location.href = "/sonoran/public/time/delete/{{entry.id}}";
+//                   successAlert('Confirmed');
+               }, function(){
+//                   errorAlert('Denied');
+               });
+               return false; 
+            });
+          </script-->
+        
+    </div>
+    
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        &nbsp;
+    </div>
+</div>
+
+{% endblock %}
